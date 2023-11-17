@@ -16,7 +16,7 @@ def generate_list(length):
 a = generate_list(20)
 b = generate_list(25)
 
-# Return a list that contains only common elements between the lists
+# Return a list that contains only common elements between the lists (no duplicates)
 # Use 1 line of code
 result = set(a).intersection(set(b))
 print(list(result))
