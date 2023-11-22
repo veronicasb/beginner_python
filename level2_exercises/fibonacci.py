@@ -6,10 +6,12 @@ def fibonacci(limit):
         yield a
         a, b = b, b + a
 
-try:
-    user_limit = int(input("Enter a number: "))
-except ValueError as e:
-    print(e, "Value submitted must be a number.")
+user_limit = ""
+while not user_limit:
+    try:
+        user_limit = int(input("Enter a number: "))
+    except ValueError as e:
+        print("Value submitted must be a number.")
 
 result = list(fibonacci(user_limit))
 
